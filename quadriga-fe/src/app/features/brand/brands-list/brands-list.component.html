@@ -1,0 +1,35 @@
+<h2 class="text-center text-bg-dark">Brands List</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>Name</th>
+            <th>Created Date</th>
+            <th>Updated Date</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let brand of brands">
+            <td> {{brand.id}} </td>
+            <td> {{brand.name}} </td>
+            <td> {{brand.createdDate}} </td>
+            <td> {{brand.updatedDate}} </td>
+            <td> 
+                <button
+                    (click)="updateBrandById(brand.id)"
+                    class="btn btn-info"> Update </button>
+                <button
+                    (click)="deleteBrandById(brand.id)"
+                    class="btn btn-danger"
+                    style="margin-left: 10px;"> Detele </button>
+                <button 
+                    (click)="brandDetails(brand.id)" 
+                    class="btn btn-warning"
+                    style="margin-left: 10px"> View </button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<h2 class="text-center text-bg-danger">Total Brands: {{brandCount}} </h2>

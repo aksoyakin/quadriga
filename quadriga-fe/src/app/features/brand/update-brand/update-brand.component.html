@@ -1,0 +1,19 @@
+<div class="col-md-6 offset-md-3">
+    <h3>Update Brand</h3>
+    <form (ngSubmit)="onSubmit()">
+    
+        <div class="form-group">
+            <label>Brand Name</label>
+            <input 
+            type="text" 
+            class="form-control"
+            id="name"
+            [(ngModel)] = "brand.name"
+            name="name"
+            >
+        </div>
+        
+        <button class="btn btn-success" style="margin-top: 10px;" type="submit">Submit</button>
+    
+    </form>
+    </div>
