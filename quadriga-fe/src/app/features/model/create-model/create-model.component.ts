@@ -38,6 +38,7 @@ export class CreateModelComponent implements OnInit {
         next: (data) => {
           console.log(data);
           this.model = data;
+          this.router.navigate(['/models/models-list']);
         },
         error: (error) => console.log(error),
         complete: () => console.log("Model created successfully!")

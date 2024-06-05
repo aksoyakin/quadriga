@@ -58,6 +58,10 @@ export class ModelListComponent implements OnInit {
     })
   }
 
+  redirectToCreateModel() {
+    this.router.navigate(['/models/create-model']);
+  }
+
 
   
 

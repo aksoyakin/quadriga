@@ -32,6 +32,7 @@ export class CreateBrandComponent implements OnInit {
         next: (data) => {
           console.log(data);
           this.brand = data;
+          this.router.navigate(['/brands/brands-list']);
         },
         error: (error) => console.log(error),
         complete: () => console.log("Brand created successfully!")

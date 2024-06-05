@@ -58,4 +58,7 @@ export class BrandsListComponent implements OnInit {
     });
   }
 
+  redirectToCreateBrand() {
+    this.router.navigate(['/brands/create-brand']);
+  }
 }

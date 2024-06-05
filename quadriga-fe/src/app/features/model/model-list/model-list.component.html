@@ -1,39 +1,42 @@
-<h2 class="text-center text-bg-dark">Model List</h2>
-<table class="table table-striped">
-    <thead>
-        <tr>
-            <th>#</th>
-            <th>Brand ID</th>
-            <th>Brand Name</th>
-            <th>Model Name</th>
-            <th>Created Date</th>
-            <th>Updated Date</th>
-            <th>Actions</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let model of models">
-            <td> {{model.id}} </td>
-            <td> {{model.brandId}} </td>
-            <td> {{model.brandName}} </td>
-            <td> {{model.name}} </td>
-            <td> {{model.createdDate}} </td>
-            <td> {{model.updatedDate}} </td>
-             <td> 
-                <button
-                    (click)="updateModelById(model.id)"
-                    class="btn btn-info"> Update </button>
-                <button
-                    (click)="deleteModelById(model.id)"
-                    class="btn btn-danger"
-                    style="margin-left: 10px;"> Detele </button>
-                <button 
-                    (click)="modelDetails(model.id)" 
-                    class="btn btn-warning"
-                    style="margin-left: 10px"> View </button>
-            </td>
-        </tr>
-    </tbody>
-</table>
+<div class="container px-3">
+    <div class="row">
+        <div class="col">
+            <h1 class="text-center text-bg-danger bg-dark bg-gradient"> Model List </h1>
 
-<h2 class="text-center text-bg-danger">Total Models: {{modelCount}} </h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Brand ID</th>
+                        <th>Brand Name</th>
+                        <th>Model Name</th>
+                        <th>Created Date</th>
+                        <th>Updated Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let model of models">
+                        <td> {{model.id}} </td>
+                        <td> {{model.brandId}} </td>
+                        <td> {{model.brandName}} </td>
+                        <td> {{model.name}} </td>
+                        <td> {{model.createdDate}} </td>
+                        <td> {{model.updatedDate}} </td>
+                        <td>
+                            <button (click)="updateModelById(model.id)" class="btn btn-info"> Update </button>
+                            <button (click)="deleteModelById(model.id)" class="btn btn-danger"
+                                style="margin-left: 10px;"> Detele </button>
+                            <button (click)="modelDetails(model.id)" class="btn btn-warning" style="margin-left: 10px">
+                                View </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2 class="text-center text-bg-danger bg-dark bg-gradient">Total Models: {{modelCount}} </h2>
+            <div class="text-center" style="margin-top: 20px;">
+                <button class="btn btn-primary btn-lg" (click)="redirectToCreateModel()">ADD NEW MODEL</button>
+            </div>
+        </div>
+    </div>

@@ -1,17 +1,22 @@
-<div class="col-md-6 offset-md-3">
-    <h3>Update Model</h3>
-    <form (ngSubmit)="onSubmit()">
-        <div class="form-group">
-            <label>Model Name</label>
-            <input 
-            type="text" 
-            class="form-control"
-            id="name"
-            [(ngModel)]="model.name"
-            name="name"
-            required>
-        </div>
+<div class="container px-3">
+    <div class="row">
+        <div class="col">
 
-        <button class="btn btn-success" type="submit">Submit</button>
-    </form>
+            <div class="col-md-6 offset-md-3">
+                <h1 class="text-center text-bg-danger bg-dark bg-gradient"> Update Brand </h1>
+                <form (ngSubmit)="onSubmit()">
+                    <div class="form-group">
+                        <label style="margin-bottom: 10px;" class="label-model-name">Model Name</label>
+
+                        <input type="text" class="form-control" id="name" [(ngModel)]="model.name" name="name" required>
+                    </div>
+
+                    <div class="text-center" style="margin-top: 20px;">
+                        <button class="btn btn-primary btn-lg" type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
 </div>
