@@ -18,7 +18,7 @@ import { Router } from '@angular/router';
 })
 export class CreateBrandComponent implements OnInit {
 
-  brand: Brand = new Brand ();
+  brand: Brand = new Brand();
 
   constructor(private brandService: BrandService,
               private router: Router

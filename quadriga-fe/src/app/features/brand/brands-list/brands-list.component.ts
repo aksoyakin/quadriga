@@ -13,8 +13,8 @@ import { Router } from '@angular/router';
   templateUrl: './brands-list.component.html',
   styleUrl: './brands-list.component.css',
 })
-export class BrandsListComponent implements OnInit {
 
+export class BrandsListComponent implements OnInit {
   brands: Brand[] = [];
   brandCount: number = 0;
 
