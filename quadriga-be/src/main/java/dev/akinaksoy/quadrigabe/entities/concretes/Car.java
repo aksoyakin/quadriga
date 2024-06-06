@@ -7,6 +7,8 @@ import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @EqualsAndHashCode(callSuper = true)
 @Data
 @Entity
@@ -15,6 +17,44 @@ import lombok.NoArgsConstructor;
 @Table(name = "cars")
 public class Car extends BaseEntity {
 
+    @Column(name = "is_available")
+    private Boolean isAvailable;
+
+    @Column(name= "year")
+    private int year;
+
+    @Column(name = "mileage_counter")
+    private int mileageCounter;
+
+    @Column(name = "seating_capacity")
+    private int seatingCapacity;
+
+    @Column(name = "plate")
+    private String plate;
+
+    @Column(name = "description")
+    private String description;
+
+    @Column(name = "price")
+    private double price;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "color_id")
+    private Color color;
+
+    @ManyToOne
+    @JoinColumn(name = "category_id", nullable = false)
+    private Category category;
+
+/*    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="category_id", referencedColumnName="id")
+    private Category category;*/
+
+    @OneToMany(mappedBy = "car", cascade = CascadeType.ALL)
+    private List<Image> images;
+
+
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "model_id")
     private Model model;
@@ -22,4 +62,12 @@ public class Car extends BaseEntity {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "brand_id", referencedColumnName = "id")
     private Brand brand;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="fuel_types_id", referencedColumnName= "id")
+    private FuelType fuelType;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name="transmission_types_id", referencedColumnName= "id")
+    private TransmissionType transmissionType;
 }
