@@ -53,7 +53,7 @@ public class FuelTypeManager implements FuelTypeService {
     @Override
     public GetFuelTypeByIdResponses getFuelTypeById(int id) {
         FuelType fuelType = fuelTypeRepository.findById(id)
-                .orElseThrow(() -> new RuntimeException("There is no fuelType for tihs id: " + id));
+                .orElseThrow(() -> new RuntimeException("There is no Fuel Type for this id: " + id));
 
         GetFuelTypeByIdResponses response = this.modelMapperService.forResponse()
                 .map(fuelType,GetFuelTypeByIdResponses.class);
