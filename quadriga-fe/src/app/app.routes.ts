@@ -7,6 +7,10 @@ import { ModelListComponent } from './features/model/model-list/model-list.compo
 import { CreateModelComponent } from './features/model/create-model/create-model.component';
 import { UpdateModelComponent } from './features/model/update-model/update-model.component';
 import { ModelDetailsComponent } from './features/model/model-details/model-details.component';
+import { CategoryListComponent } from './features/category/category-list/category-list.component';
+import { CreateCategoryComponent } from './features/category/create-category/create-category.component';
+import { UpdateCategoryComponent } from './features/category/update-category/update-category.component';
+import { CategoryDetailsComponent } from './features/category/category-details/category-details.component';
 
 export const routes: Routes = [
     //brands
@@ -19,4 +23,9 @@ export const routes: Routes = [
     {path: 'models/create-model', component: CreateModelComponent},
     {path: 'models/update-model/:id', component: UpdateModelComponent},
     {path: 'models/model-details/:id', component: ModelDetailsComponent},
+    //categories
+    {path: 'categories/category-list', component: CategoryListComponent},
+    {path: 'categories/create-category', component: CreateCategoryComponent},
+    {path: 'categories/update-category/:id', component: UpdateCategoryComponent},
+    {path: 'categories/category-details/:id', component: CategoryDetailsComponent},
 ];

@@ -16,15 +16,13 @@ import { Router } from '@angular/router';
   templateUrl: './create-brand.component.html',
   styleUrl: './create-brand.component.css',
 })
-export class CreateBrandComponent implements OnInit {
+export class CreateBrandComponent {
 
   brand: Brand = new Brand();
 
   constructor(private brandService: BrandService,
               private router: Router
   ){}
-
-  ngOnInit(): void { }
 
   createBrand(){
     this.brandService.createBrand(this.brand)
@@ -43,5 +41,4 @@ export class CreateBrandComponent implements OnInit {
     console.log(this.brand)
     this.createBrand();
   }
-
 }

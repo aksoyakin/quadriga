@@ -32,7 +32,4 @@ export class BrandDetailsComponent implements OnInit {
         complete: () => console.log("Data init completed.")
       })
   }
-
-
-
 }
