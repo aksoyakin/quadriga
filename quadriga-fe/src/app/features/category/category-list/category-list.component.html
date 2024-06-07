@@ -1,0 +1,38 @@
+<div class="container px-3">
+    <div class="row">
+        <div class="col">
+            <h1 class="text-center text-bg-danger bg-dark bg-gradient"> Brand List </h1>
+
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Created Date</th>
+                        <th>Updated Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let category of categories">
+                        <td> {{category.id}} </td>
+                        <td> {{category.name}} </td>
+                        <td> {{category.createdDate}} </td>
+                        <td> {{category.updatedDate}} </td>
+                        <td>
+                            <button (click)="updateCategoryById(category.id)" class="btn btn-info"> Update </button>
+                            <button (click)="deleteCategoryById(category.id)" class="btn btn-danger"
+                                style="margin-left: 10px;"> Detele </button>
+                            <button (click)="categoryDetails(category.id)" class="btn btn-warning" style="margin-left: 10px">
+                                View </button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2 class="text-center text-bg-danger bg-dark bg-gradient">Total Categories: {{categoryCount}} </h2>
+            <div class="text-center" style="margin-top: 20px;">
+                <button class="btn btn-primary btn-lg" (click)="redirectToCreateCategory()">ADD NEW CATEGORY</button>
+            </div>
+        </div>
+    </div>
