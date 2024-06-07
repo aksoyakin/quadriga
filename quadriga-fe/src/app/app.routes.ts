@@ -11,6 +11,10 @@ import { CategoryListComponent } from './features/category/category-list/categor
 import { CreateCategoryComponent } from './features/category/create-category/create-category.component';
 import { UpdateCategoryComponent } from './features/category/update-category/update-category.component';
 import { CategoryDetailsComponent } from './features/category/category-details/category-details.component';
+import { ColorsListComponent } from './features/color/colors-list/colors-list.component';
+import { CreateColorComponent } from './features/color/create-color/create-color.component';
+import { UpdateColorComponent } from './features/color/update-color/update-color.component';
+import { ColorDetailsComponent } from './features/color/color-details/color-details.component';
 
 export const routes: Routes = [
     //brands
@@ -28,4 +32,9 @@ export const routes: Routes = [
     {path: 'categories/create-category', component: CreateCategoryComponent},
     {path: 'categories/update-category/:id', component: UpdateCategoryComponent},
     {path: 'categories/category-details/:id', component: CategoryDetailsComponent},
+    //colors
+    {path: 'colors/colors-list', component: ColorsListComponent},
+    {path: 'colors/create-color', component: CreateColorComponent},
+    {path: 'colors/update-color/:id', component: UpdateColorComponent},
+    {path: 'colors/color-details/:id', component: ColorDetailsComponent},
 ];
