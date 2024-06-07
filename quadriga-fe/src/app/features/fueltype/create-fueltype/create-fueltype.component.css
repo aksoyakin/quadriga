@@ -1,0 +1,9 @@
+.form-group {
+  display: flex;
+  align-items: center; /* Dikey hizalama */
+}
+
+.label-fueltype-FuelTypes {
+  font-size: 18px;
+  font-weight: bold;
+}

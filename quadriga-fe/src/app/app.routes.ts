@@ -15,6 +15,10 @@ import { ColorsListComponent } from './features/color/colors-list/colors-list.co
 import { CreateColorComponent } from './features/color/create-color/create-color.component';
 import { UpdateColorComponent } from './features/color/update-color/update-color.component';
 import { ColorDetailsComponent } from './features/color/color-details/color-details.component';
+import { FuelTypesListComponent } from './features/fueltype/fueltypes-list/fueltypes-list.component';
+import { CreateFuelTypeComponent } from './features/fueltype/create-fueltype/create-fueltype.component';
+import { UpdateFuelTypeComponent } from './features/fueltype/update-fueltype/update-fueltype.component';
+import { FuelTypeDetailsComponent } from './features/fueltype/fueltype-details/fueltype-details.component';
 
 export const routes: Routes = [
     //brands
@@ -37,4 +41,9 @@ export const routes: Routes = [
     {path: 'colors/create-color', component: CreateColorComponent},
     {path: 'colors/update-color/:id', component: UpdateColorComponent},
     {path: 'colors/color-details/:id', component: ColorDetailsComponent},
+    //fueltypes
+    {path: 'fueltypes/fueltypes-list', component: FuelTypesListComponent},
+    {path: 'fueltypes/create-fueltype', component: CreateFuelTypeComponent},
+    {path: 'fueltypes/update-fueltype/:id', component: UpdateFuelTypeComponent},
+    {path: 'fueltypes/fueltype-details/:id', component: FuelTypeDetailsComponent},
 ];
