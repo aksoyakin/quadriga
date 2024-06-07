@@ -19,6 +19,10 @@ import { FuelTypesListComponent } from './features/fueltype/fueltypes-list/fuelt
 import { CreateFuelTypeComponent } from './features/fueltype/create-fueltype/create-fueltype.component';
 import { UpdateFuelTypeComponent } from './features/fueltype/update-fueltype/update-fueltype.component';
 import { FuelTypeDetailsComponent } from './features/fueltype/fueltype-details/fueltype-details.component';
+import { TransmissionTypesListComponent } from './features/transmissiontype/transmissiontypes-list/transmissiontypes-list.component';
+import { CreateTransmissionTypeComponent } from './features/transmissiontype/create-transmissiontype/create-transmissiontype.component';
+import { UpdateTransmissionTypeComponent } from './features/transmissiontype/update-transmissiontype/update-transmissiontype.component';
+import { TransmissionTypeDetailsComponent } from './features/transmissiontype/transmissiontype-details/transmissiontype-details.component';
 
 export const routes: Routes = [
     //brands
@@ -46,4 +50,9 @@ export const routes: Routes = [
     {path: 'fueltypes/create-fueltype', component: CreateFuelTypeComponent},
     {path: 'fueltypes/update-fueltype/:id', component: UpdateFuelTypeComponent},
     {path: 'fueltypes/fueltype-details/:id', component: FuelTypeDetailsComponent},
+    //fueltypes
+    {path: 'transmissiontypes/transmissiontypes-list', component: TransmissionTypesListComponent},
+    {path: 'transmissiontypes/create-transmissiontype', component: CreateTransmissionTypeComponent},
+    {path: 'transmissiontypes/update-transmissiontype/:id', component: UpdateTransmissionTypeComponent},
+    {path: 'transmissiontypes/transmissiontype-details/:id', component: TransmissionTypeDetailsComponent},
 ];
