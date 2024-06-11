@@ -18,7 +18,7 @@ import java.util.List;
 public class Car extends BaseEntity {
 
     @Column(name = "is_available")
-    private Boolean isAvailable;
+    private boolean isAvailable;
 
     @Column(name= "year")
     private int year;
