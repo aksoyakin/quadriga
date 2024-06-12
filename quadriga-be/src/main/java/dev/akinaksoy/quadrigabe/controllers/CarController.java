@@ -7,6 +7,7 @@ import dev.akinaksoy.quadrigabe.services.dtos.responses.car.CreateCarResponses;
 import dev.akinaksoy.quadrigabe.services.dtos.responses.car.GetAllCarResponses;
 import dev.akinaksoy.quadrigabe.services.dtos.responses.car.GetCarByIdResponses;
 import dev.akinaksoy.quadrigabe.services.dtos.responses.car.UpdateCarResponses;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -26,8 +27,8 @@ public class CarController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    CreateCarResponses createCar(CreateCarRequests createCarRequests){
-        return carService.createCar(createCarRequests);
+    CreateCarResponses createCar(@Valid @RequestBody CreateCarRequests createCarRequests){
+        return this.carService.createCar(createCarRequests);
     }
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)

@@ -46,22 +46,12 @@ public class Car extends BaseEntity {
     @JoinColumn(name = "category_id", nullable = false)
     private Category category;
 
-/*    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name="category_id", referencedColumnName="id")
-    private Category category;*/
-
     @OneToMany(mappedBy = "car", cascade = CascadeType.ALL)
     private List<Image> images;
-
-
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "model_id")
     private Model model;
-
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "brand_id", referencedColumnName = "id")
-    private Brand brand;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name="fuel_types_id", referencedColumnName= "id")

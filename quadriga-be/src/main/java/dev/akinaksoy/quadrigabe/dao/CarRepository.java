@@ -12,7 +12,7 @@ public interface CarRepository extends JpaRepository<Car, Integer> {
 
     List<Car> findByPlate(String plate);
 
-    List<Car> findByMileageCounter(int kilometer);
+    List<Car> findByMileageCounter(int mileageCounter);
 
     List<Car> findByPrice(double price);
 

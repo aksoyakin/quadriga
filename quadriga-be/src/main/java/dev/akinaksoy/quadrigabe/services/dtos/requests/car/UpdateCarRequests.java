@@ -20,7 +20,6 @@ public class UpdateCarRequests {
     private int colorId;
     private int categoryId;
     private int modelId;
-    private int brandId;
     private int fuelTypeId;
     private int transmissionTypeId;
 

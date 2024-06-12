@@ -22,7 +22,6 @@ public class GetCarByIdResponses {
     private int colorId;
     private int categoryId;
     private int modelId;
-    private int brandId;
     private int fuelTypeId;
     private int transmissionTypeId;
     private LocalDate createdDate;
