@@ -1,0 +1,62 @@
+// Input alanları için genel stil
+input[type="text"],
+input[type="number"],
+input[type="date"],
+select {
+    width: calc(100% - 20px);
+    padding: 12px;
+    margin: 5px 0; // Boşlukları azaltıldı
+    border: 2px solid #000; // Kenarlık rengi siyah yapıldı
+    border-radius: 8px; // Köşeleri daha belirgin hale getirildi
+    box-sizing: border-box;
+    transition: border-color 0.3s ease; // Geçiş efekti eklendi
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+select:focus {
+    border-color: #555; // Odaklandığında kenarlık rengi koyu gri yapıldı
+}
+
+// Labellar için genel stil
+label {
+    display: block;
+    margin-bottom: 5px; // Boşlukları azaltıldı
+    font-weight: bold;
+    text-align: center;
+    color: #000; // Metin rengi siyah yapıldı
+    text-transform: uppercase; // Labelların metinleri büyük harfe dönüştürüldü
+}
+
+// Form grupları için genel stil
+.form-group {
+    margin-bottom: 15px; // Form grupları arasındaki boşluk azaltıldı
+}
+
+// Form container'ı için genel stil
+.col-md-10 {
+    margin-top: 30px; // Form container'ının üst boşluğu azaltıldı
+    background-color: #f0f0f0; // Arka plan rengi açık gri yapıldı
+    padding: 30px; // Padding değeri azaltıldı
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); // Gölge yoğunluğu artırıldı
+}
+
+// Form submit düğmesi için stil
+.text-center button {
+    padding: 12px 24px; // Düğme boyutları azaltıldı
+    border-radius: 10px; // Köşeler daha yumuşatıldı
+    background-color: #000; // Daha koyu bir mavi renk kullanıldı
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.text-center button:hover {
+    background-color: #333; // Düğme üzerine gelindiğinde daha koyu bir mavi renk kullanıldı
+}

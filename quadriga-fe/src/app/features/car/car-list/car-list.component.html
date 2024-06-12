@@ -1,0 +1,64 @@
+<div class="container px-3">
+    <div class="row">
+        <div class="col">
+            <h1 class="text-center text-bg-danger bg-dark bg-gradient"> Car List </h1>
+
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Availability</th>
+                        <th>Year</th>
+                        <th>Mileage</th>
+                        <th>Seating</th>
+                        <th>Plate</th>
+                        <th>Description</th>
+                        <th>Price</th>
+                        <th>Color</th>
+                        <th>Transmission</th>
+                        <th>Fuel</th>
+                        <th>Model</th>
+                        <th>Category</th>
+<!--                         <th>Created Date</th>
+                        <th>Updated Date</th> -->
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let car of cars">
+                        <td>{{ car.id }}</td>
+                        <td>
+                            {{ car.available ? 'Available' : 'Not Available' }}
+                        </td>
+                        
+                        <td>{{ car.year }}</td>
+                        <td>{{ car.mileageCounter }} km</td>
+                        <td>{{ car.seatingCapacity }}</td>
+                        <td>{{ car.plate }}</td>
+                        <td>{{ car.description }}</td>
+                        <td>{{ car.price | currency }}</td>
+                        <td>{{ getColorName(car.colorId) }}</td>
+                        <td>{{ getTransmissionTypeName(car.transmissionTypeId) }}</td>
+                        <td>{{ getFuelTypeName(car.fuelTypeId) }}</td>
+                        <td>{{ getModelName(car.modelId) }}</td>
+                        <td>{{ getCategoryName(car.categoryId) }}</td>
+<!--                         <td>{{ car.createdDate }}</td>
+                        <td>{{ car.updatedDate }}</td> -->
+                        <td>
+                            <div class="btn-group" role="group">
+                                <button (click)="updateCarById(car.id)" class="btn btn-info">Update</button>
+                                <button (click)="deleteCarById(car.id)" class="btn btn-danger">Delete</button>
+                                <button (click)="carDetails(car.id)" class="btn btn-warning">View</button>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h2 class="text-center text-bg-danger bg-dark bg-gradient">Total Cars: {{ carCount }} </h2>
+            <div class="text-center" style="margin-top: 20px;">
+                <button class="btn btn-primary btn-lg" (click)="redirectToCreateCar()">ADD NEW CAR</button>
+            </div>
+        </div>
+    </div>
+</div>

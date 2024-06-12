@@ -1,0 +1,35 @@
+/* Tablo başlıklarını ve verilerini ortala */
+.table thead th,
+.table tbody td {
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Buton grubunu düzenli bir şekilde hizala */
+.table tbody .btn-group {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+/* Tablo satır arka plan renklerini değiştir */
+.table tbody tr:nth-child(even) {
+    background-color: #f8f9fa; /* Hafif gri arka plan */
+}
+
+/* Tablonun kenarlarını yuvarla */
+.table {
+    border-radius: 10px;
+}
+
+/* Tablo başlıklarının ve verilerinin arka plan rengini güçlendir */
+.table thead th,
+.table tbody td {
+    background-color: #f2f2f2; /* Açık gri arka plan */
+}
+
+/* Butonları daha belirgin hale getir */
+.btn {
+    border-radius: 5px;
+    padding: 8px 16px;
+}

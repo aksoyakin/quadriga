@@ -1,0 +1,20 @@
+.form-group {
+  display: flex;
+  align-items: center; /* Dikey hizalama */
+
+  label {
+      font-size: 18px;
+      font-weight: bold;
+      min-width: 150px; // Label'ın minimum genişliği
+  }
+
+  input,
+  select {
+      flex: 1; // Input alanlarının genişliğini ayarlamak için
+      margin-left: 10px; // Label ile aralarındaki boşluğu ayarlamak için
+  }
+
+  input[type="number"] {
+      width: 100px; // Sayı input alanlarının genişliği
+  }
+}

@@ -23,6 +23,11 @@ import { TransmissionTypesListComponent } from './features/transmissiontype/tran
 import { CreateTransmissionTypeComponent } from './features/transmissiontype/create-transmissiontype/create-transmissiontype.component';
 import { UpdateTransmissionTypeComponent } from './features/transmissiontype/update-transmissiontype/update-transmissiontype.component';
 import { TransmissionTypeDetailsComponent } from './features/transmissiontype/transmissiontype-details/transmissiontype-details.component';
+import { CarListComponent } from './features/car/car-list/car-list.component';
+import { CreateCarComponent } from './features/car/create-car/create-car.component';
+import { UpdateCarComponent } from './features/car/update-car/update-car.component';
+import { CarDetailsComponent } from './features/car/car-details/car-details.component';
+
 
 export const routes: Routes = [
     //brands
@@ -50,9 +55,14 @@ export const routes: Routes = [
     {path: 'fueltypes/create-fueltype', component: CreateFuelTypeComponent},
     {path: 'fueltypes/update-fueltype/:id', component: UpdateFuelTypeComponent},
     {path: 'fueltypes/fueltype-details/:id', component: FuelTypeDetailsComponent},
-    //fueltypes
+    //transmissiontypes
     {path: 'transmissiontypes/transmissiontypes-list', component: TransmissionTypesListComponent},
     {path: 'transmissiontypes/create-transmissiontype', component: CreateTransmissionTypeComponent},
     {path: 'transmissiontypes/update-transmissiontype/:id', component: UpdateTransmissionTypeComponent},
     {path: 'transmissiontypes/transmissiontype-details/:id', component: TransmissionTypeDetailsComponent},
+    //cars
+    {path: 'cars/cars-list', component: CarListComponent},
+    {path: 'cars/create-car', component: CreateCarComponent},
+    {path: 'cars/update-car/:id', component: UpdateCarComponent},
+    {path: 'cars/car-details/:id', component: CarDetailsComponent},
 ];
