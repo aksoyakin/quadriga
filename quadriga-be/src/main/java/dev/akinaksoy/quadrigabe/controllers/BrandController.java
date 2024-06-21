@@ -17,6 +17,10 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * BrandController class.
+ */
+
 @CrossOrigin
 @RestController
 @RequestMapping("api/v1/brands")
