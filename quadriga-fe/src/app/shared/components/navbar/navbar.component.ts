@@ -4,7 +4,7 @@ import { RouterModule } from '@angular/router';
 import { ButtonComponent } from '../button/button.component';
 
 @Component({
-  selector: 'app-navbar',
+  selector: 'app-navbar2',
   standalone: true,
   imports: [
     CommonModule,
@@ -13,7 +13,7 @@ import { ButtonComponent } from '../button/button.component';
     
   ],
   templateUrl: './navbar.component.html',
-  styleUrl: './navbar.component.scss'
+  styleUrl: './navbar.component.css'
 })
 
 export class NavbarComponent {

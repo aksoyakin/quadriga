@@ -27,6 +27,7 @@ import { CarListComponent } from './features/car/car-list/car-list.component';
 import { CreateCarComponent } from './features/car/create-car/create-car.component';
 import { UpdateCarComponent } from './features/car/update-car/update-car.component';
 import { CarDetailsComponent } from './features/car/car-details/car-details.component';
+import { CarsCardComponent } from './shared/components/cars-card/cars-card.component';
 
 
 export const routes: Routes = [
@@ -65,4 +66,12 @@ export const routes: Routes = [
     {path: 'cars/create-car', component: CreateCarComponent},
     {path: 'cars/update-car/:id', component: UpdateCarComponent},
     {path: 'cars/car-details/:id', component: CarDetailsComponent},
+    
+    
+    //category
+    {path: 'category/:id', component: CarsCardComponent},
+    {path: 'category', component: CarsCardComponent},
+    {path: 'cars', component: CarsCardComponent},
+/*     {path: '', redirectTo: '/cars', pathMatch: 'full'},
+    {path: '**', redirectTo: '/cars', pathMatch: 'full'}, */
 ];

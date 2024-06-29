@@ -1,29 +1,90 @@
+html {
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--main-color);
+    border-radius: 5rem;
+  }
+}
+
+section {
+  padding: 50px 100px;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #eeeff1;
+  padding: 15px 100px;
+}
+
+.logo img {
+  width: 40px;
+}
+
 .navbar {
-//  background: rgba($color: #ced0d33a, $alpha: 1.0);
-//  background: transparent;
-//  background: rgba($color: #7795A4, $alpha: 1.0);
-background: rgba($color: #dfe2e2, $alpha: 1);
+  display: flex;
 
-  padding: 1.5rem 1rem;
-  transition: background 0.3s ease-in-out;
-  margin-bottom: 20px;
-
-/*   &-scrolled {
-    background: rgba(0, 0, 0, 0.7);
-  }
- */
-  .nav-link {
-    font-size: 1.2rem; // Adjust the font size for navbar links
+  li {
+    position: relative;
   }
 
-  .navbar-brand {
-    font-size: 1.5rem; // Adjust the font size for the brand name
+  a {
+    font-size: 1rem;
+    padding: 10px 20px;
+    color: var(--text-color);
+    font-weight: 500;
+
+    &::after {
+      content: '';
+      width: 0;
+      height: 3px;
+      background: var(--gradient);
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      transition: 0.5s;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
   }
 }
 
-.nav-button {
-  margin-left: 10px;
-  margin-right: 10px;
-  font-size: 1.2rem; // Adjust the font size for the buttons
+#menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 10001;
+  display: none;
 }
 
+.header-btn {
+  a {
+    padding: 10px 20px;
+    color: var(--text-color);
+    font-weight: 500;
+
+    &.sign-in {
+      background: #474fa0;
+      color: #fff;
+      border-radius: 0.5rem;
+
+      &:hover {
+        background: var(--main-color);
+      }
+    }
+  }
+}

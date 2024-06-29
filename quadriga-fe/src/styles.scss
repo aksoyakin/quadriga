@@ -1,21 +1,37 @@
-/* You can add global styles to this file, and also import other style files */
-/* styles.css veya styles.scss */
-.navbar-brand {
-    font-family: 'Roboto Slab', serif;
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #333; /* Yazı rengini değiştirin */
-    text-transform: uppercase; /* Harfleri büyük yapın */
-    letter-spacing: 1px; /* Harfler arası boşluk ekleyin */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-padding-top: 2rem;
+  scroll-behavior: smooth;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --main-color: #fe5b3d;
+  --second-color: #ffac38;
+  --text-color: #444;
+  --gradient: linear-gradient(#fe5b3d, #ffac38);
+}
+
+// Commonly used
+section {
+  padding: 50px 100px;
+}
+
+.heading {
+  text-align: center;
+
+  span {
+    font-weight: 500;
+    text-transform: uppercase;
   }
 
-
-/* body {
-    font-family: 'Roboto Slab', serif;
-    font-size: 16px; 
-    color: #333; 
+  h1 {
+    font-size: 2rem;
   }
-   */
-  
-  
-  
+}

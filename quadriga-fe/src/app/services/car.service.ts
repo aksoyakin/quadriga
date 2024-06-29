@@ -33,4 +33,8 @@ export class CarService {
   deleteCarById(id: number): Observable<Object> {
     return this.httpClient.delete(this.baseURL + '/' + id);
   }
+
+  getCarByCategoryId(categoryId: number): Observable<Car[]> {
+    return this.httpClient.get<Car[]>(`${this.baseURL}/getByCategoryId?categoryId=${categoryId}`);
+  }
 }
