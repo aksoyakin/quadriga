@@ -1,0 +1,25 @@
+<div class="wrapper">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <div class="sidebar-heading">Admin Panel</div>
+      <ul class="sidebar-menu">
+        <li><a href="#" onclick="setContent('dashboard')">Dashboard</a></li>
+        <li>
+          <a href="#" onclick="toggleDropdown('management')">Management</a>
+          <ul class="dropdown" id="managementDropdown">
+            <li><a href="#" onclick="setContent('account')">Account</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <!-- Page Content -->
+    <div class="content">
+      <div class="navbar">
+        <button class="menu-toggle" onclick="toggleSidebar()">Toggle Menu</button>
+      </div>
+      <div class="main-content" id="mainContent">
+        <h1>Admin Panel Content</h1>
+        <p>Select an item from the sidebar to view its content.</p>
+      </div>
+    </div>
+  </div>

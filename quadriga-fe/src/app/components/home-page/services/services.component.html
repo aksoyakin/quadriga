@@ -1,0 +1,23 @@
+<section class="services" id="services">
+
+    <div class="heading">
+        <span>Best Services</span>
+        <h1>Explore Our Top Deals <br> From Top Rated Dealers</h1>
+    </div>
+
+    <div class="services-container">
+        <div class="box" *ngFor="let car of cars">
+            <div class="box-img">
+                <img src="/assets/images/car4.jpg" alt="">
+            </div>
+            <p> {{car.year}} </p>
+            <h3> {{getModelName(car.modelId)}} </h3>
+            <h2> {{car.price | currency }} <span>/daily</span></h2>
+            <h2>
+                <i class="fa fa-gas-pump"> </i> {{getFuelTypeName(car.fuelTypeId)}}
+                <i class="fa fa-cogs"></i> {{getTransmissionTypeName(car.transmissionTypeId)}}
+                <i class="fa fa-palette"></i> {{getColorName( car.colorId )}}
+            </h2>
+            <a href="#" class="btn">Rent Now</a>
+        </div>
+    </div>

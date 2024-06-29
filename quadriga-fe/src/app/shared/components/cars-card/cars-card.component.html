@@ -1,0 +1,31 @@
+<div class="container" style="margin-top:50px;">
+    <div class="row">
+        <div class="col-md-3" *ngFor="let car of cars" style="margin-bottom: 30px;">
+            <div class="card-sl" style="padding: 10px; border: 1px solid #ccc; border-radius: 8px;">
+                <div class="card-image" style="text-align: center;">
+                    <img src="https://images.pexels.com/photos/1149831/pexels-photo-1149831.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" style="max-width: 100%; height: auto;"/>
+                </div>
+
+               <!--  <a class="card-action" href="#"><i class="fa fa-heart"></i></a> -->
+                <div class="card-heading" style="font-size: 1.2em; font-weight: bold; margin-top: 10px;">
+                    {{ getModelName(car.modelId) }}
+                </div>
+                <div class="card-text">
+                    <p><i class="fa fa-tachometer-alt"></i> <strong></strong> {{ car.mileageCounter }}</p>
+                    <p><i class="fa fa-calendar-alt"></i> <strong></strong> {{ car.year }}</p>
+                    <p><i class="fa fa-palette"></i> <strong></strong> {{ getColorName(car.colorId) }}</p>
+                    <p><i class="fa fa-cogs"></i> <strong> </strong> {{ getTransmissionTypeName(car.transmissionTypeId) }}</p>
+                    <p><i class="fa fa-gas-pump"></i> <strong></strong> {{ getFuelTypeName(car.fuelTypeId) }}</p>
+                    <p><i class="fa fa-tags"></i> <strong></strong> {{ getCategoryName(car.categoryId) }}</p>
+                </div>
+                <div class="card-text" style="font-size: 1.5em; font-weight: bold; color: #000; margin-top: 10px; text-align: center;">
+                    {{ car.price | currency }}
+                </div>
+                <a href="#" class="card-button" style="display: block; text-align: center; margin-top: 10px; padding: 10px 0; background-color: #007bff; color: #fff; text-decoration: none; border-radius: 5px;">RENT</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- FontAwesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
